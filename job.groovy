@@ -10,6 +10,7 @@ job('Jenskins-Docker-DSL') {
         shell('''
         git config --global user.name "Jenkins"
         git config --global user.email "jenkins@example.com"
+        git tag -a -m "Jenkins Build" jenkins-build-$(date +%s)
         python -m unittest something_test.py
         ''')
     }
