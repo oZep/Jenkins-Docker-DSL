@@ -6,7 +6,7 @@ job('Python-Unit-Tests') {
     }
 
     triggers {
-        scm('H/10 * * * *') // Poll SCM every 5 minutes
+        commentTrigger('build')
     }
 
     steps {
