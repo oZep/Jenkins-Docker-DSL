@@ -9,7 +9,7 @@ job('Jenskins-Docker-DSL') {
     steps {
         shell('''
         git tag -a -m "Jenkins Build" jenkins-build-$(date +%s)
-        python -m unittest something_test.py
+        python3 -m unittest something_test.py
         ''')
     }
 }
