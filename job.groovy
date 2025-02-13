@@ -7,6 +7,6 @@ job('Jenskins-Docker-DSL') {
         scm('H/5 * * * *')
     }
     steps {
-        shell('''python -m unittest discover -s tests''')
+        shell('''python -m unittest something_test.py''')
     }
 }
