@@ -7,6 +7,10 @@ job('Jenskins-Docker-DSL') {
         scm('H/5 * * * *')
     }
     steps {
-        shell('''python -m unittest something_test.py''')
+        shell('''
+        git config --global user.name "Jenkins"
+        git config --global user.email "jenkins@example.com"
+        python -m unittest something_test.py
+        ''')
     }
 }
